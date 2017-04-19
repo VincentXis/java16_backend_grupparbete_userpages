@@ -1,0 +1,5 @@
+/home/vincentxis/dev/java-backend-projects/UserLogin/src/main/java/se/nackademin/session/IPersistable.java
+/home/vincentxis/dev/java-backend-projects/UserLogin/src/main/java/se/nackademin/session/SessionBean.java
+/home/vincentxis/dev/java-backend-projects/UserLogin/src/main/java/se/nackademin/backend/FakeDB.java
+/home/vincentxis/dev/java-backend-projects/UserLogin/src/main/java/se/nackademin/pagebeans/AuthenticationPageBean.java
+/home/vincentxis/dev/java-backend-projects/UserLogin/src/main/java/se/nackademin/domain/User.java
