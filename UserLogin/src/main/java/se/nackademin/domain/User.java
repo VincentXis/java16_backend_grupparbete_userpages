@@ -4,7 +4,7 @@ import se.nackademin.session.IPersistable;
 
 public class User implements IPersistable{
     private String id;
-    private String userName;
+    private String username;
     private String password;
 
     // Constructor
@@ -20,23 +20,17 @@ public class User implements IPersistable{
         return id;
     }
     
-    public String getUserName() {
-        if (userName == null) {
-            userName = "wawa";
-        }
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {
-        if (password == null) {
-            password = "123";
-        }
         return password;
     }
 
     // Set
-    public void setUserName(String newUserName) {
-        this.userName = newUserName;
+    public void setUsername(String newUsername) {
+        this.username = newUsername;
     }
 
     public void setPassword(String newPassword) {
