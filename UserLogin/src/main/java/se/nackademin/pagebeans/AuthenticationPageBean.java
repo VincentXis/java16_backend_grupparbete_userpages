@@ -1,5 +1,6 @@
 package se.nackademin.pagebeans;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -9,27 +10,50 @@ import se.nackademin.session.SessionBean;
 @Named
 @RequestScoped
 public class AuthenticationPageBean {
-    
+
     @Inject
     private SessionBean sessionHandler;
-
     private User selectedUser;
-    
+    private String inputUsername;
+    private String inputPassword;
+
+    @PostConstruct
+    public void load() {
+        selectedUser = new User();
+    }
+
     // outcome
-    public String doLogin(){
-        if (getSessionHandler().retrieve(getSelectedUser().getId()) != null){
-            throw new RuntimeException("You are already logged in " + getSelectedUser().getUsername());
+    public String doLogin() {
+        if (getSessionHandler().retrieve(getSelectedUser().getId()) != null) {
+            throw new RuntimeException("Du är redan inloggad " + getSelectedUser().getUsername());
         }
         getSessionHandler().persist(getSelectedUser());
-        return"/userPages/welcome.xhtml";
+        return "/userPages/welcome.xhtml";
     }
-    
-    public String doLogout(){
+
+    public String doLogout() {
         getSessionHandler().remove(getSelectedUser().getId());
-        return"/index.xhtml";
+        return "/index.xhtml";
     }
-    
-    
+
+    // set
+    public void setSessionHandler(SessionBean sessionHandler) {
+        this.sessionHandler = sessionHandler;
+    }
+
+    public void setSelectedUser() {
+        selectedUser.setUsername(getInputUsername());
+        selectedUser.setPassword(getInputPassword());
+    }
+
+    public void setInputUsername(String inputUsername) {
+        this.inputUsername = inputUsername;
+    }
+
+    public void setInputPassword(String inputPassword) {
+        this.inputPassword = inputPassword;
+    }
+
     // get
     public SessionBean getSessionHandler() {
         return sessionHandler;
@@ -37,18 +61,23 @@ public class AuthenticationPageBean {
 
     public User getSelectedUser() {
         if (selectedUser == null) {
-            selectedUser = new User();
+            setSelectedUser();
         }
         return selectedUser;
     }
-    
-    // set
-    public void setSessionHandler(SessionBean sessionHandler) {
-        this.sessionHandler = sessionHandler;
+
+    public String getInputUsername() {
+        if (inputUsername == null) {
+            inputUsername = "";
+        }
+        return inputUsername;
     }
 
-    public void setSelectedUser(User selectedUser) {
-        this.selectedUser = selectedUser;
+    public String getInputPassword() {
+        if (inputPassword == null) {
+            inputPassword = "";
+        }
+        return inputPassword;
     }
 
 }
