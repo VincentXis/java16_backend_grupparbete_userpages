@@ -20,10 +20,10 @@
                     <p:panelGrid columns="2">
                         
                         <h:outputLabel value="Username:"/>
-                        <h:inputText id="userName" value="${authenticationPageBean.selectedUser.userName}"/>
+                        <h:inputText id="username" value="${authenticationPageBean.inputUsername}" required="true"/>
                         
                         <h:outputLabel value="Password:" />
-                        <h:inputText id="password" value="${authenticationPageBean.selectedUser.password}"/>
+                        <h:inputText id="password" value="${authenticationPageBean.inputPassword}" required="true"/>
                         
                     </p:panelGrid>
                     <h:commandButton id="doLogin" value="Login" action="${authenticationPageBean.doLogin()}"/>

@@ -13,13 +13,13 @@ public class FakeDB {
     // Singleton constructor
     private FakeDB() {
         User user = new User();
-        getUsersMap().put(user.getUserName(), user);
+        getUsersMap().put(user.getUsername(), user);
     }
 
     
     // Functions
     public static User doRegister(User user) {
-        getInstance().getUsersMap().put(user.getUserName(), user);
+        getInstance().getUsersMap().put(user.getUsername(), user);
         return user;
     }
 
