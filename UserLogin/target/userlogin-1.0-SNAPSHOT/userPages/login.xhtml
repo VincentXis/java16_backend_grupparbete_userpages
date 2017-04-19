@@ -23,7 +23,7 @@
                         <p:inputText id="userName" value="${authenticationPageBean.inputUsername}"/>
                         
                         <p:outputLabel value="Password:" />
-                        <p:inputText id="password" value="${authenticationPageBean.selectedUser.password}"/>
+                        <p:inputText id="password" value="#{authenticationPageBean.selectedUser.password}"/>
                         
                     </p:panelGrid>
                     <br/>
