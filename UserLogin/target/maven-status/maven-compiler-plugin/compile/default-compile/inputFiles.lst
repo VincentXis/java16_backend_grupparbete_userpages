@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-/home/ola/projects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/pagebeans/AuthenticationPageBean.java
-/home/ola/projects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/session/IPersistable.java
-/home/ola/projects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/backend/FakeDB.java
-/home/ola/projects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/domain/User.java
-/home/ola/projects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/session/SessionBean.java
-=======
 /Users/NathalieCirverius/NetBeansProjects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/backend/FakeDB.java
 /Users/NathalieCirverius/NetBeansProjects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/session/SessionBean.java
 /Users/NathalieCirverius/NetBeansProjects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/domain/User.java
 /Users/NathalieCirverius/NetBeansProjects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/session/IPersistable.java
 /Users/NathalieCirverius/NetBeansProjects/java16_backend_grupparbete_userpages/UserLogin/src/main/java/se/nackademin/pagebeans/AuthenticationPageBean.java
->>>>>>> 6bb33f2745cc6b2e7edaf559a5e96f9d6dd89a15

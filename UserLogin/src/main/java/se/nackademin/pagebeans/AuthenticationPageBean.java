@@ -28,7 +28,7 @@ public class AuthenticationPageBean {
             throw new RuntimeException("Du är redan inloggad " + getSelectedUser().getUsername());
         }
         getSessionHandler().persist(getSelectedUser());
-        return "/userPages/welcome.xhtml";
+        return "/userPages/welcomeTemplate.xhtml";
     }
 
     public String doLogout() {
