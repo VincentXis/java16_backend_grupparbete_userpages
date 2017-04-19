@@ -15,7 +15,9 @@
             <p:menuitem outcome="/userPages/login.xhtml" value="Login"/>
             
             <f:facet name="options">
-                <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+                <h:form>
+                    <p:commandButton id="doLogout" value="Logout" action="#{authenticationPageBean.doLogout()}"/>
+                </h:form>
             </f:facet>
 
         </p:menubar>
@@ -28,7 +30,6 @@
         <ui:insert name="content">
             Content tag default text
         </ui:insert>
-
 
     </h:body>
 

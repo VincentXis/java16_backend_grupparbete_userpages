@@ -17,8 +17,8 @@ public class AuthenticationPageBean {
     
     // outcome
     public String doLogin(){
-        if (getSessionHandler().retrieve(   getSelectedUser().getId()) != null){
-            throw new RuntimeException("Du är redan inloggad " + getSelectedUser().getUserName());
+        if (getSessionHandler().retrieve(getSelectedUser().getId()) != null){
+            throw new RuntimeException("You are already logged in " + getSelectedUser().getUserName());
         }
         getSessionHandler().persist(getSelectedUser());
         return"/userPages/welcome.xhtml";

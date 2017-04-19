@@ -19,18 +19,18 @@
                 <h:form>
                     <p:panelGrid columns="2">
                         
-                        <h:outputLabel value="Username:"/>
-                        <h:inputText id="userName" value="${authenticationPageBean.selectedUser.userName}"/>
+                        <p:outputLabel value="Username:"/>
+                        <p:inputText id="userName" value="${authenticationPageBean.selectedUser.userName}"/>
                         
-                        <h:outputLabel value="Password:" />
-                        <h:inputText id="password" value="${authenticationPageBean.selectedUser.password}"/>
+                        <p:outputLabel value="Password:" />
+                        <p:inputText id="password" value="${authenticationPageBean.selectedUser.password}"/>
                         
                     </p:panelGrid>
-                    <h:commandButton id="doLogin" value="Login" action="${authenticationPageBean.doLogin()}"/>
+                    <br/>
+                    <p:commandButton id="doLogin" value="Login" action="${authenticationPageBean.doLogin()}"/>
                 </h:form>
                 
             </ui:define>
         </ui:composition>
     </h:body>
 </html>
-
