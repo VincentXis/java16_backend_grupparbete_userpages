@@ -16,6 +16,7 @@ public class AuthenticationPageBean {
     private User selectedUser;
     private String inputUsername;
     private String inputPassword;
+    private String wawa;
 
     @PostConstruct
     public void load() {
