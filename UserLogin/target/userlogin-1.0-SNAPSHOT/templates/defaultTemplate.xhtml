@@ -2,22 +2,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>clever title</title>
     </h:head>
+
     <h:body>
-        <h:panelGroup layout="block" style="text-align: center;">
-            <h:button outcome="/index.xhtml" value="Home"/>
-            <h:button outcome="/userPages/login.xhtml" value="Login"/>
-        </h:panelGroup>
+        <p:menubar>
+            <p:menuitem outcome="/index.xhtml" value="Home"/>
+            <p:menuitem outcome="/userPages/login.xhtml" value="Login"/>
             
+            <f:facet name="options">
+                <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+            </f:facet>
+
+        </p:menubar>
+
         <ui:insert name="header">
-            Header tag default text
+                Header tag default text
+                <br/>
         </ui:insert>
+
         <ui:insert name="content">
             Content tag default text
         </ui:insert>
-    </h:body>
-</html>
 
+
+    </h:body>
+
+</html>
